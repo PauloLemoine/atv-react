@@ -4,10 +4,9 @@
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "Bundler",
+    "moduleResolution": "Node",  // Ajuste para evitar conflitos
     "allowImportingTsExtensions": true,
     "isolatedModules": true,
     "moduleDetection": "force",
@@ -19,7 +18,12 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+
+    /* Ajustes para resolver o problema */
+    "skipLibCheck": false,  // Verificação de tipagem completa
+    "allowSyntheticDefaultImports": true,  // Permite imports mais flexíveis
+    "types": ["react", "react-dom"]  // Adiciona as tipagens necessárias
   },
   "include": ["src"]
 }
