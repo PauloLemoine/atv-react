@@ -24,7 +24,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={<Login usuarios={usuarios} />} />
+        <Route path="/" element={<Login usuarios={usuarios} />} />
         <Route path="/cadastro" element={<Cadastro adicionarUsuario={adicionarUsuario} />} />
       </Routes>
     </Router>
