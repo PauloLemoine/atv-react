@@ -2,7 +2,7 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LoginProps } from './type';
-import styles from './login.module.css'; // Importando o CSS modular
+import styles from './login.module.css'
 
 const Login: React.FC<LoginProps> = ({ usuarios }) => {
   const [email, setEmail] = useState<string>('');
@@ -19,7 +19,7 @@ const Login: React.FC<LoginProps> = ({ usuarios }) => {
     if (usuarioValido) {
       setErro('');
       alert('Login realizado com sucesso!');
-      navigate('/'); // Redireciona para a página principal
+      navigate('/');
     } else {
       setErro('Email ou senha incorretos!');
     }
@@ -32,8 +32,8 @@ const Login: React.FC<LoginProps> = ({ usuarios }) => {
     };
 
   return (
-    <div className={styles.container}> {/* Container principal do login */}
-      <div className={styles.card}> {/* Card onde fica o formulário */}
+    <div className={styles.container}>
+      <div className={styles.card}>
         <h2>Login</h2>
         <form onSubmit={handleLogin}>
           <div className="mb-3">

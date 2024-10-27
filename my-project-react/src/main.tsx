@@ -1,4 +1,3 @@
-// src/main.tsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -11,13 +10,13 @@ const adicionarUsuario = (usuario: { nome: string, email: string, senha: string 
 };
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="/cadastro" element={<Cadastro adicionarUsuario={adicionarUsuario} />} />
-        <Route path="/login" element={<Login usuarios={[]} />} />
-      </Routes>
-    </BrowserRouter>
-  </React.StrictMode>
-);
+    <React.StrictMode>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/cadastro" element={<Cadastro adicionarUsuario={adicionarUsuario} />} />
+          <Route path="/login" element={<Login usuarios={[]} />} />
+        </Routes>
+      </BrowserRouter>
+    </React.StrictMode>
+  );

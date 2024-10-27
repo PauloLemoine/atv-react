@@ -3,11 +3,9 @@
 //import arrow7 from "./imgs/Arrow 7.svg";
 //import image1 from "./imgs/image 1.png";
 //import image6 from "./imgs/image 6.png";
-//import "./App.css";
 
-// src/App.tsx
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import {  Route, Routes } from 'react-router-dom';
 import Login from './login';
 import Cadastro from './cadastro';
 import { Usuario } from './type';
@@ -22,12 +20,10 @@ const App: React.FC = () => {
   };
 
   return (
-    <Router>
       <Routes>
         <Route path="/" element={<Login usuarios={usuarios} />} />
         <Route path="/cadastro" element={<Cadastro adicionarUsuario={adicionarUsuario} />} />
       </Routes>
-    </Router>
   );
 };
 
