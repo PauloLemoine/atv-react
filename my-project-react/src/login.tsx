@@ -1,4 +1,4 @@
-// src/login.tsx
+
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LoginProps } from './type';
